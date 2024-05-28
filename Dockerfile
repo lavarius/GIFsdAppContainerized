@@ -31,7 +31,7 @@ RUN rustup component add clippy
 # RUN cargo --version
 
 # Install Solana CLI
-RUN sh -c "$(curl -sSfL https://release.solana.com/v1.17.25/install)"
+RUN sh -c "$(curl -sSfL https://release.solana.com/v1.18.14/install)"
 # Ensure the Solana CLI is added to the PATH
 ENV PATH="/root/.local/share/solana/install/active_release/bin:${PATH}"
 RUN solana --version
@@ -41,7 +41,7 @@ RUN cargo install --git https://github.com/coral-xyz/anchor --tag v0.30.0 anchor
 RUN anchor --version
 
 # Install yarn
-RUN npm install -g yarn
+RUN npm install -g yarn@1.22.22
 
 # Set up the working directory
 WORKDIR /workdir
