@@ -40,6 +40,9 @@ RUN solana --version
 RUN cargo install --git https://github.com/coral-xyz/anchor --tag v0.30.0 anchor-cli --locked
 RUN anchor --version
 
+# Install yarn
+RUN npm install -g yarn
+
 # Set up the working directory
 WORKDIR /workdir
 
